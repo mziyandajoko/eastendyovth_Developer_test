@@ -332,11 +332,15 @@ line-height: 73px;
         }
         .operation-times--section{
             display: flex;
-            justify-content:flex-start;
-            flex-direction: row-reverse;
+            justify-content: flex-end;
+            flex-direction: row;
             
             .oparation-times--section{
                 display: flex;
+            }
+            @media (max-width: 560px) {
+                flex-direction: column-reverse;
+                align-items: center;
             }
         }
         .operation-times--back-ground-image{
