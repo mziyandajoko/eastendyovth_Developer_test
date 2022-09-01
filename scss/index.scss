@@ -62,8 +62,8 @@
     .pad_bottom--15{
         padding-bottom: 15px;
     }
-    .pad_tb--20{
-        padding: 20px 0px;
+    .pad_tb--40{
+        padding: 40px 0px;
     }
 
     .flex_row{
@@ -293,12 +293,18 @@ line-height: 73px;
     // shopping section
 
     .shoping-section--grid{
-        display: block;
+        display: flex;
+        flex-direction: column;
         padding: 15px;
         display: grid;
         grid-gap: 15px;
+        display: flex;
+
+    align-items: center;
         @media (min-width: 768px) {
             grid-template-columns: repeat(2, 1fr);
+            justify-content: space-between;
+        flex-direction: row;
         }
         @media (min-width: 992px) {
             grid-template-columns: repeat(4, 1fr);
