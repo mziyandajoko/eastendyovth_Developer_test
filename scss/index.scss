@@ -325,10 +325,37 @@ line-height: 73px;
     }
 
     //footer section
+    // footer{
+    //     display: flex;
+    //     padding: 40px 0px;
+    //     align-items: space-between;
+    // }
+    // .social-media-links li {
+    //     display: inline-block;
+        
+    //     
+    // }
 
-    .food-section--sub-images{
-        height: 100px;
-    }
+    // .food-section--sub-images{
+    //     height: 100px;
+    // }
 
     
+footer{
+    display: flex;
+    padding: 40px 20px;
+    justify-content: space-between;
+    align-items: center;
+    
+        li{
+            justify-content: space-between;
+            display: inline-block;
+            margin: 0px 15px;
+            
+            a{
+                color: var(--deep-orange)
+            }
+        }
+    
 
+}
