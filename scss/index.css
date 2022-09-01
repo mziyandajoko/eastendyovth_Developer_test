@@ -1,0 +1,30 @@
+:root {
+  --white: #FFFFFF;
+  --deep-blue: #000000;
+  --deep-orange: #CEA889;
+  --background-color: #2B5265;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.2;
+}
+
+.grid {
+  display: block;
+  padding: 15px;
+  display: grid;
+  grid-gap: 15px;
+}
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.grid .col {
+  background-color: pink;
+  grid-gap: 15px;
+  padding: 15px;
+}/*# sourceMappingURL=index.css.map */

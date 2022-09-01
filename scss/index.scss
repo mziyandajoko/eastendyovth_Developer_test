@@ -1,0 +1,318 @@
+:root{
+    --white: #FFFFFF;
+    --deep-blue: #000000;
+    --deep-orange: #CEA889;
+    --background-color: #2B5265;
+    --grey: #95A1B3;
+    }
+    * { 
+        margin: 0;
+        padding: 0;
+        
+    }
+    h2{
+        color: var(--deep-orange);
+        font-size: 1.5rem;
+        font-weight:100;
+    }
+    body{
+        box-sizing: border-box;
+        background-color: var(--background-color);
+        font-family: sans-serif;
+        color: var(--white);
+    }
+    img{
+        display: block;
+        width: 100px;
+        max-width: 100%;
+    }
+
+    // grid setup
+
+    .grid{
+        display: grid;
+        grid-gap: 15px;
+        place-items: center;
+
+
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (min-width: 992px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .col{
+            // background-color: pink;
+            grid-gap: 15px;
+            padding: 15px;
+            
+            &.image_block{
+                align-self: start;
+                padding: 0;
+            }
+        }
+    }
+    
+
+    // utility classes
+
+    
+    .pad_bottom--15{
+        padding-bottom: 15px;
+    }
+    .pad_tb--20{
+        padding: 20px 0px;
+    }
+
+    .flex_row{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        @media (min-width: 768px) {
+            display: flex;
+        }    
+    }
+    .flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+        
+        }
+    }
+    .general_btn{
+        background-color: var(--deep-orange);
+        width: 180px;
+        max-width: 100%;
+        color: var(--white);
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 10px 25px;
+        border-radius: 30px;
+        transition: transform .4s; 
+    }
+    .general_btn:hover{
+        transform: scale(1.2);
+    }
+    // .flex_row--reverse{
+    //     display: flex;
+    //     flex-direction: row-reverse;
+    //     @media (min-width: 768px) {
+    //         flex-direction: row;
+    //     }    
+    // }
+
+
+// Hero section
+
+.hero{
+    background-image: url('/assets/hero.png');
+	height: 80vh;
+	width: 100%;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    // background: linear-gradient(180deg, #535268 0%, rgba(83, 82, 104, 0) 100%);
+    opacity: 0.62;
+
+nav{
+	display: flex;
+	align-items:flex-end;
+	justify-content: space-between;
+	padding-top: 45px;
+	padding-left: 8%;
+	padding-right: 8%;
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+.logo{
+	color: white;
+	font-size: 16px;
+	letter-spacing: 1px;
+	cursor: pointer;
+    
+}
+.nav_image--logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 70px;
+    max-width: 100%;
+    color: red;
+    
+}
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px  25px;
+}
+nav ul li a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+nav ul li a:hover{
+	color: var(--deep-orange);
+    transition: transform .4s;
+    transform: scale(1.2);
+}
+.btn{
+	background-color: var(--grey);
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 25px;
+	border-radius: 30px;
+	transition: transform .4s; 
+}
+.btn:hover{
+	transform: scale(1.2);
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+	position: absolute;
+	top: 40%;
+	left:8%;
+	transform: translateY(-50%);
+    color: var(--white);
+    min-width: 50%;
+    width: 50%;
+    @media (max-width: 768px) {
+        min-width: 100%;
+        width: 100%;
+        right: 0;
+    }
+    
+}
+.hero-header{
+    font-size: 2.5rem;
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+    }
+}
+.hero-brief--text{
+    font-size: 15px;
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+}
+}
+
+// call out section
+
+.call_out{
+    position: relative;
+    width: 80%;
+    left: 100px;
+    padding: 25px;
+    top: -6rem;
+    background: rgba(0, 0, 0, 0.33);
+    border-radius: 20px;
+    
+    &.call_out--header{
+    font-family: 'Arvo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 67px;
+    }
+    &.call_out--text{
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        // line-height: 33px;
+    }
+}
+
+// second section
+
+
+
+.music_lineUp--header{
+font-family: 'Arvo';
+font-style: normal;
+font-weight: 400;
+// font-size: 37px;
+line-height: 73px;
+}
+
+.music_lineU--background-image{
+    background-image: url('/assets/WestlakeFishHouseSummer.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.music_lineUp--list{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 2;
+}
+
+// food section
+
+.food-section{
+    display: flex;
+    justify-content: center;
+}
+
+.background_shadow{
+    width: 100%;
+    max-width: 1000px;
+    background: rgba(0, 0, 0, 0.33);
+    border-radius: 20px;
+    padding: 20px;
+    // min-height: 500px;
+    height: 100%;
+    top: 137px;
+    margin: 0px 30px;
+    
+    
+}
+.wrapper{
+    position: relative;
+    top: -65px;
+}
+    // shopping section
+
+    .shoping-section--grid{
+        display: block;
+        padding: 15px;
+        display: grid;
+        grid-gap: 15px;
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width: 992px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+
+    // operation-times--section
+
+    //footer section
+
+    .food-section--sub-images{
+        height: 100px;
+    }
+
+    
+
