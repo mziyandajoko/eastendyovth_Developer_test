@@ -69,8 +69,21 @@ img {
   padding-bottom: 15px;
 }
 
+.pad_ltrb--40 {
+  padding: 40px;
+}
+
 .pad_tb--40 {
   padding: 40px 0px;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .flex_row {
@@ -112,6 +125,12 @@ img {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+}
+
+.flex_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .general_btn {
@@ -364,6 +383,28 @@ img {
   }
 }
 
+.operation-banner--image {
+  max-width: 500px;
+}
+
+.operation-times--section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.operation-times--section .oparation-times--section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .operation-times--back-ground-image {
   background-image: url("/assets/FishHouseatsunrise.png");
   background-repeat: no-repeat;
@@ -377,7 +418,6 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 40px 20px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
