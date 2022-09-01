@@ -324,22 +324,6 @@ line-height: 73px;
         
     }
 
-    //footer section
-    // footer{
-    //     display: flex;
-    //     padding: 40px 0px;
-    //     align-items: space-between;
-    // }
-    // .social-media-links li {
-    //     display: inline-block;
-        
-    //     
-    // }
-
-    // .food-section--sub-images{
-    //     height: 100px;
-    // }
-
     
 footer{
     display: flex;
@@ -356,6 +340,17 @@ footer{
                 color: var(--deep-orange)
             }
         }
-    
+    @media (max-width: 560px) {
+        flex-direction: column;
+        .social-media-links{
+            padding-top: 20px;
+            li{
+                display: flex;
+                flex-direction: column;
+                
+            }
+        }
+
+    }
 
 }

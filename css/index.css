@@ -395,3 +395,23 @@ footer li {
 footer li a {
   color: var(--deep-orange);
 }
+@media (max-width: 560px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .social-media-links {
+    padding-top: 20px;
+  }
+  footer .social-media-links li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
