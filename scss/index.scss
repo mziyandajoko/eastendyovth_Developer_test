@@ -15,7 +15,7 @@
     }
     li{
         display: block;
-        line-height: 2.5;
+        // line-height: 2.5;
     }
     
     h2{
@@ -65,21 +65,37 @@
     
 
     // utility classes
-    
+    .line_img{
+        background-image: url('/assets/ropes-02.png');
+        // width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 10px;
+        padding: 10px;
+        margin-top: 15px;
+        margin-bottom: 5rem;
+
+    }
+    .container{
+        width: 1024px;
+        max-width: 100%;
+        z-index: 1;
+    }
     .pad_bottom--15{
         padding-bottom: 15px;
     }
-    // used these so far more than twice
+    
     .pad_ltrb--80{
-        padding: 80px;
+        padding: 80px 40px;
     }
     .pad_trb--80{
         padding-top: 80px;
-        padding-right: 80px;
+        padding-right: 40px;
         padding-bottom: 80px;
     }
     .pad_ltb--80{
-        padding-left: 80px;
+        padding-left: 40px;
         padding-top: 80px;
         padding-bottom: 80px;
     }
@@ -90,32 +106,6 @@
         display: flex;
         align-items: center;
     }
-
-    .flex_row{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-
-        @media (min-width: 768px) {
-            display: flex;
-        }    
-    }
-    .flex{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        @media (min-width: 768px) {
-            flex-direction: row;
-        
-        }
-    }
-
-    .flex_row--item{
-        display: flex;
-    }
-
-    
 
     .general_btn{
         background-color: var(--deep-orange);
@@ -132,85 +122,83 @@
     .general_btn:hover{
         transform: scale(1.2);
     }
-    // .flex_row--reverse{
-    //     display: flex;
-    //     flex-direction: row-reverse;
-    //     @media (min-width: 768px) {
-    //         flex-direction: row;
-    //     }    
-    // }
-
 
 // Hero section
 
 .hero{
+    display: flex;
     background-image: url('/assets/hero.png');
-	height: 80vh;
+	height: 100vh;
 	width: 100%;
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     // background: linear-gradient(180deg, #535268 0%, rgba(83, 82, 104, 0) 100%);
-    opacity: 0.62;
-
-nav{
-	display: flex;
-	align-items:flex-end;
-	justify-content: space-between;
-	padding-top: 45px;
-	padding-left: 8%;
-	padding-right: 8%;
-    @media (max-width: 768px) {
-        display: none;
-    }
-}
-.logo{
-	color: white;
-	font-size: 16px;
-	letter-spacing: 1px;
-	cursor: pointer;
-    
-}
-.nav_image--logo{
-    display: flex;
+    // opacity: 0.62;
     flex-direction: column;
-    align-items: flex-end;
-    width: 70px;
-    max-width: 100%;
-    color: red;
-    
-}
-nav ul li{
-	list-style-type: none;
-	display: inline-block;
-	padding: 10px  25px;
-}
-nav ul li a{
-	color: white;
-	text-decoration: none;
-	font-weight: bold;
-	text-transform: capitalize;
-}
-nav ul li a:hover{
-	color: var(--deep-orange);
-    transition: transform .4s;
-    transform: scale(1.2);
-}
+
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        ul{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            margin-top: 15px;
+            align-items: center;
+            
+            font-size: 12px !important;
+            .nav_list{
+                display: flex;
+                flex-direction: row;
+                .logo{
+                    background-image: url('/assets/WFHLogo-Whiteversion1.svg');
+                    width: 80%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    padding: 20px;
+                }
+                .nav_list img{
+                    
+                    max-width: 50% !important;
+                }
+                a{
+                    color: var(--white);
+                }
+            }
+        } 
+        .hero_content{
+            .hero_content--iner-container{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        @media (max-width:768px) {
+            display: none;
+            .hero_content{
+        margin-top: 40px;
+         
+            }            
+        }
+    }
 .btn{
 	background-color: var(--grey);
-	color: white;
+	color: var(--white);
 	text-decoration: none;
 	border: 2px solid transparent;
 	font-weight: bold;
 	padding: 10px 25px;
 	border-radius: 30px;
 	transition: transform .4s; 
+    color: var(--deep-orange);
 }
 .btn:hover{
 	transform: scale(1.2);
 }
-.content{
+.hero_content{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -226,12 +214,14 @@ nav ul li a:hover{
     font-size: 2.5rem;
     @media (max-width: 768px) {
         font-size: 1.5rem;
+        padding-bottom: 20px;
     }
 }
 .hero-brief--text{
     font-size: 15px;
     @media (min-width: 768px) {
         font-size: 18px;
+        padding-bottom: 31px;
     }
 }
 }
@@ -296,9 +286,9 @@ nav ul li a:hover{
             h2{
                 font-family: "Arvo";
                 font-style: normal;
-                font-weight: 400;
-                font-size: 49px;
-                line-height: 58px;
+                font-weight: 300;
+                font-size: 33px;
+                line-height: 38px;
             }
             li{
                 line-height: 2;
@@ -306,6 +296,10 @@ nav ul li a:hover{
         }
         @media (max-width: 560px) {
             align-items: center;
+            h2{
+                font-size: 24px;
+                line-height: 47px;
+            }
         }
     }
     @media (max-width: 560px) {
@@ -316,8 +310,6 @@ nav ul li a:hover{
     }
 }
 
-
-
 .event_lineup--background-image{
     background-image: url('/assets/WestlakeFishHouseSummer.png');
     background-repeat: no-repeat;
@@ -326,11 +318,11 @@ nav ul li a:hover{
     width: 250px;
     height: 250px;  
     padding: 50px;
+    margin-bottom: 20px;
     
 }
 
 // Meals section
-
 
 .background_shadow{
     
