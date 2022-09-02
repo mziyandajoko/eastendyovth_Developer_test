@@ -355,6 +355,56 @@ img {
   top: -65px;
 }
 
+.booking_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.booking_section h2 {
+  font-family: "Arvo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 59px;
+}
+.booking_section .booking_table--section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 560px) {
+  .booking_section .booking_table--section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .booking_section h2 {
+    font-size: 18px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 560px) {
+  .booking_section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 15px;
+  }
+}
+
 .store_section {
   display: -webkit-box;
   display: -ms-flexbox;
