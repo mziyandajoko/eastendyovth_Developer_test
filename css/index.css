@@ -69,18 +69,24 @@ img {
   padding-bottom: 15px;
 }
 
-.pad_ltrb--40 {
-  padding: 40px;
+.pad_ltrb--80 {
+  padding: 80px;
 }
 
-.pad_ltb--40 {
-  padding-left: 40px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+.pad_trb--80 {
+  padding-top: 80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
 }
 
-.pad_tb--40 {
-  padding: 40px 0px;
+.pad_ltb--80 {
+  padding-left: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.pad_tb--80 {
+  padding: 80px 0px;
 }
 
 .center {
@@ -306,28 +312,79 @@ img {
   font-size: 25px;
 }
 
-.music_lineUp--header {
+.event_lineup--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.event_lineup--container .event_lineup--inner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+.event_lineup--container .event_lineup--inner-container img {
+  max-height: 250px;
+}
+.event_lineup--container .event_lineup--inner-container h2 {
   font-family: "Arvo";
   font-style: normal;
   font-weight: 400;
+  font-size: 48px;
   line-height: 73px;
 }
+.event_lineup--container .event_lineup--inner-container li {
+  line-height: 4;
+}
+.event_lineup--container .event_lineup--inner-container ul {
+  -moz-text-align-last: justify;
+       text-align-last: justify;
+}
+@media (max-width: 768px) {
+  .event_lineup--container .event_lineup--inner-container h2 {
+    font-family: "Arvo";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 49px;
+    line-height: 58px;
+  }
+  .event_lineup--container .event_lineup--inner-container li {
+    line-height: 2;
+  }
+}
+@media (max-width: 560px) {
+  .event_lineup--container .event_lineup--inner-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (max-width: 560px) {
+  .event_lineup--container {
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
-.music_lineU--background-image {
+.event_lineup--background-image {
   background-image: url("/assets/WestlakeFishHouseSummer.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 100%;
-}
-
-.music_lineUp--list {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 14px;
-  line-height: 3;
+  width: 250px;
+  height: 250px;
+  padding: 50px;
 }
 
 .background_shadow {
