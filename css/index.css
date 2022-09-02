@@ -81,6 +81,13 @@ img {
   z-index: 1;
 }
 
+.pad_bottom--call-out-15 {
+  padding-bottom: 15px;
+  padding-bottom: 33px;
+  line-height: 1.5;
+  color: var(--white);
+}
+
 .pad_bottom--15 {
   padding-bottom: 15px;
 }
@@ -272,6 +279,7 @@ img {
   width: 80%;
   left: 100px;
   padding: 25px;
+  margin: 20px;
   top: -6rem;
   background: rgba(0, 0, 0, 0.33);
   border-radius: 20px;
@@ -280,14 +288,26 @@ img {
   font-family: "Arvo";
   font-style: normal;
   font-weight: 400;
-  font-size: 48px;
+  font-size: 55px;
   line-height: 67px;
+  padding-bottom: 33px;
+  line-height: 1.5;
 }
 .call_out.call_out--text {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 25px;
+  padding-bottom: 33px;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .call_out {
+    top: -57;
+    justify-items: center;
+    line-height: 1.5;
+    left: 6%;
+  }
 }
 
 .event_lineup--container {
