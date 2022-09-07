@@ -128,6 +128,9 @@ main .container {
     margin: 15px;
   }
 }
+main .six {
+  background-color: gray;
+}
 
 header {
   display: -webkit-box;
@@ -448,9 +451,6 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 50px solid transparent;
-  -o-border-image: url("/assets/ropes-02.png") 100 repeat;
-     border-image: url("/assets/ropes-02.png") 100 repeat;
 }
 footer li {
   -webkit-box-pack: justify;
