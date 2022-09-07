@@ -350,11 +350,11 @@ footer{
     align-items: center;
     // border: 50px solid transparent;
     
-    &::before { 
-        content:"";
-        height:20px; 
-        width:100%; /* or i.e: 500px */
-        border-image: url('/assets/ropes-02.png') 100 repeat;
+    // &::before { 
+    //     content:"";
+    //     height:20px; 
+    //     width:100%; /* or i.e: 500px */
+    //     border-image: url('/assets/ropes-02.png') 100 repeat;
         // background:url("http://lorempixel.com/g/400/100/?example.jpg");
     
         li{
@@ -381,4 +381,4 @@ footer{
 
 }
 
-}
+
