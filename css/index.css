@@ -28,7 +28,7 @@ body {
 a {
   text-decoration: none;
   color: var(--white);
-  font-family: "Nunito Sans";
+  font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -36,7 +36,7 @@ a {
 }
 
 h1 {
-  font-family: "Arvo";
+  font-family: "Arvo", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 68px;
@@ -45,7 +45,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Arvo";
+  font-family: "Arvo", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
@@ -180,7 +180,7 @@ header ul li {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 60%;
-  margin-bottom: 200px;
+  margin-bottom: 300px;
 }
 @media (max-width: 768px) {
   .hero_content {
@@ -188,7 +188,7 @@ header ul li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 144px;
   }
 }
 .hero_content .hero-brief--text {
@@ -445,31 +445,35 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 50px solid transparent;
+}
+footer::before {
+  content: "";
+  height: 20px;
+  width: 100%; /* or i.e: 500px */
   -o-border-image: url("/assets/ropes-02.png") 100 repeat;
      border-image: url("/assets/ropes-02.png") 100 repeat;
 }
-footer li {
+footer::before li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   display: inline-block;
   margin: 0px 15px;
 }
-footer li a {
+footer::before li a {
   color: var(--deep-orange);
 }
 @media (max-width: 560px) {
-  footer {
+  footer::before {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  footer .social-media-links {
+  footer::before .social-media-links {
     padding-top: 20px;
   }
-  footer .social-media-links li {
+  footer::before .social-media-links li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

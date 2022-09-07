@@ -26,14 +26,14 @@ body{
 a{
     text-decoration: none;
     color: var(--white);
-    font-family: 'Nunito Sans';
+    font-family: 'Nunito Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 27px;
    }
    h1{
-    font-family: 'Arvo';
+    font-family: 'Arvo', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 68px;
@@ -41,7 +41,7 @@ a{
     color: var(--white);
    }
    h2{
-    font-family: 'Arvo';
+    font-family: 'Arvo', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 48px;
@@ -158,12 +158,12 @@ header{
     display: flex;
     flex-direction: column;
     width: 60%;
-    margin-bottom: 200px;
-    // justify-content: space-around;
+    margin-bottom: 300px;
+
 @media (max-width: 768px) {
     width: 100%;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 144px;
 
 }
     .hero-brief--text{    
@@ -348,8 +348,14 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 50px solid transparent;
-    border-image: url('/assets/ropes-02.png') 100 repeat;
+    // border: 50px solid transparent;
+    
+    &::before { 
+        content:"";
+        height:20px; 
+        width:100%; /* or i.e: 500px */
+        border-image: url('/assets/ropes-02.png') 100 repeat;
+        // background:url("http://lorempixel.com/g/400/100/?example.jpg");
     
         li{
             justify-content: space-between;
@@ -375,4 +381,4 @@ footer{
 
 }
 
-
+}
