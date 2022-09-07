@@ -133,9 +133,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 50px solid transparent;
-  -o-border-image: url("/assets/ropes-02.png") 100 repeat;
-     border-image: url("/assets/ropes-02.png") 100 repeat;
 }
 header ul {
   display: -webkit-box;
